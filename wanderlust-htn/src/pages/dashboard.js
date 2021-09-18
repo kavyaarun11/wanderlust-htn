@@ -1,11 +1,15 @@
 import React from "react";
 import MediaCard from "../Components/Card";
 import MediaCard2 from "../Components/Card2";
+import background from "../images/background.png"
 import "../App.css";
 
 const Hero = ({ handleLogout }) => {
   return (
-    <section className='hero'>
+    <section className='hero' style = {{backgroundImage:`url(${background})` ,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    }}>
 
       <nav>
         Welcome Back!
