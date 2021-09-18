@@ -17,90 +17,13 @@
 }
 
 .card-container{
- padding: 10px;
+ padding: 10px
 }
 
 .Cardcontent{
   padding-left: 10vh;
   padding-right: 10vh;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  font-family: "Poppins", sans-serif;
-}
-.CardBox1{
-    max-width: 345;
-    margin: 'auto';
-    background: radial-gradient(
-    ellipse at left bottom,
-    rgb(133, 199, 222) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(245, 245, 245, 0.9) 100%
-  );
-  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
-  height: 400px;
-}
-.CardBox1:after{
-  content: "Create New Trip";
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-}
-.CardBox2{
-    max-width: 345;
-    margin: 'auto';
-    background: radial-gradient(
-    ellipse at left bottom,
-    rgb(133, 199, 222) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(245, 245, 245, 0.9) 100%
-  );
-  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
-  height: 400px;
-}
-.CardBox2:after{
-  content: "View Past Trips";
-  color: black;
-  font-weight: bold;
-  font-size: 30px;
-}
-
-#cardFrame{
-    box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
-}
-
-.MuiPaper-root {
-    box-shadow: 0 50px 70px -20px rgb(0 0 0 / 80%)!important;
-    height: 400px;
-}
-
-.MuiPaper-root:hover {
-    transform: translate(-10px, -10px)!important;
-}
-
-.CardBox1:hover{
-    background: radial-gradient(
-    ellipse at left bottom,
-    rgb(98, 185, 216) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(198, 219, 240, 0.9) 100%
-  );
-}
-
-.CardBox1:hover::after{
-    content:"Hello";
-}
-.CardBox2:hover{
-    background: radial-gradient(
-    ellipse at left bottom,
-    rgb(98, 185, 216) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(198, 219, 240, 0.9) 100%
-  );
-}
-
-.CardBox2:hover::after{
-    content:"Hello";
-}
-nav{
-    background: transparent;
-}
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  font-size: 6vh;
+} 
