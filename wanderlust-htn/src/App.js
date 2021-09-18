@@ -3,6 +3,7 @@ import fire from "./auth/fire.js";
 import Dashboard from "./pages/dashboard";
 import "./App.css";
 import Login from "./pages/Login";
+import { firestore } from "firebase";
 
 const App = () => {
   const [user, setUser] = useState("");
@@ -28,6 +29,19 @@ const App = () => {
     fire
       .auth()
       .signInWithEmailAndPassword(email, password)
+      .then((data) => {
+        fire
+          .firestore()
+          .collection("users")
+          .doc(data.uid)
+          .set({ uid: data.uid })
+          .then(() => {
+            console.log("working");
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
       .catch((err) => {
         switch (err.code) {
           case "auth/invalid-email":
@@ -47,6 +61,7 @@ const App = () => {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
+      .then((data) => {})
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":
