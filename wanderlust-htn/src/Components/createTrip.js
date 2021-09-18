@@ -1,12 +1,11 @@
 import React from "react";
+import "../App.css";
 import { withRouter } from "react-router-dom";
 
-function createTrip() {
-  return (
-    <div>
-      <h1>Hello World</h1>
-    </div>
-  );
+class CreateTrip extends React.Component {
+  render() {
+    return <div>parmin</div>;
+  }
 }
 
-export default withRouter(createTrip);
+export default withRouter(CreateTrip);

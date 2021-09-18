@@ -12,6 +12,7 @@ import { ThemeProvider, createTheme } from "@material-ui/core/styles";
 import { useHistory, withRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CreateTrip from "../Components/createTrip";
+import { ButtonBase } from "@material-ui/core";
 
 const theme = createTheme({
   typography: {
@@ -34,18 +35,15 @@ const useStyles = makeStyles({
 });
 
 function MediaCard() {
-  let [count, setCount] = useState(0);
   const classes = useStyles();
   const history = useHistory();
-  function clicked(event) {
-    history.push("/createTrip");
-  }
+
   return (
     <Card className='card-container'>
       <CardActionArea
         className={classes.container}
         id='cardFrame'
-        onClick={clicked()}
+        onClick={() => history.push("/create-trip")}
       >
         <CardContent className='CardBox1'>
           <Typography

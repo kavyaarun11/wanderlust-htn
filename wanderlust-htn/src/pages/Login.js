@@ -3,6 +3,7 @@ import React from "react";
 import "../App.css";
 import ParticlesContainer from "./ParticleContainer";
 import logo from "../images/main-logo.png";
+import { withRouter } from "react-router";
 
 const Login = (props) => {
   const {
@@ -17,22 +18,19 @@ const Login = (props) => {
     emailError,
     passwordError,
   } = props;
-   
-    return (
 
+  return (
     <section className='login'>
-        <ParticlesContainer> </ParticlesContainer>
+      <ParticlesContainer> </ParticlesContainer>
       <nav>
         <img src={logo} alt='logo' />
       </nav>
       <div className='loginContainerDetails'>
         <h1 className='slogan'>
           <span>
-            
-              keep<b> dreaming.</b>
-              <br />
-              keep <b>travelling.</b>
-           
+            keep<b> dreaming.</b>
+            <br />
+            keep <b>travelling.</b>
           </span>
           <br />
         </h1>
@@ -89,9 +87,8 @@ const Login = (props) => {
           )}
         </div>
       </div>
-      </section>
+    </section>
   );
 };
 
-
-export default Login;
+export default withRouter(Login);
