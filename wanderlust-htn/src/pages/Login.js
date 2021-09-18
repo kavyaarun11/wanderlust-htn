@@ -1,8 +1,8 @@
 import React from "react";
 
 import "../App.css";
-
-//import logo from "../images/main-logo.png";
+import ParticlesContainer from "./ParticleContainer";
+import logo from "../images/main-logo.png";
 
 const Login = (props) => {
   const {
@@ -21,8 +21,9 @@ const Login = (props) => {
     return (
 
     <section className='login'>
+        <ParticlesContainer> </ParticlesContainer>
       <nav>
-        {/* //<img src={logo} alt='logo' /> */}
+        <img src={logo} alt='logo' />
       </nav>
       <div className='loginContainerDetails'>
         <h1 className='slogan'>
