@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import fire from "../../auth/fire";
+import { useHistory } from "react-router-dom";
 
 import "./modal.css";
 
@@ -71,12 +72,11 @@ export default function TransportationModal() {
     setNumber('');
     setTIme('');
   };
-
+  let history = useHistory();
   return (
     <div>
       <nav>
-        <b>Transportation</b>
-        <button className='logout'>Go Back</button>
+        <button className='logout' onClick={history.goBack}>Go Back</button>
       </nav>
       <div className='button-container'>
         <Button id='transportation-modal-button' onClick={handleOpen}>

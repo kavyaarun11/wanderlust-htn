@@ -5,7 +5,6 @@ import EventModal from "../../Components/modal/events-modal";
 function Events() {
   return (
     <div>
-      Events
       <EventModal />
     </div>
   );

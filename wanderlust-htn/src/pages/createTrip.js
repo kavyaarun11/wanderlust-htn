@@ -6,6 +6,7 @@ import EventsCard from "../Components/four-cards/eventsCard";
 import ItineraryCard from "../Components/four-cards/itineraryCard";
 import TransportationCard from "../Components/four-cards/transportationCard";
 import HotelCard from "../Components/four-cards/hotels";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +24,7 @@ const useStyles = makeStyles({
 
 function CreateTrip({ handleLogout }) {
   const classes = useStyles();
+  let history = useHistory();
   return (
     <section
       className='hero'
@@ -37,7 +39,7 @@ function CreateTrip({ handleLogout }) {
         <button className='profile_button'>
           <b>PROFILE</b>
         </button>
-        <button onClick={handleLogout}>LOGOUT</button>
+        <button onClick={history.goBack}>Go Back</button>
       </nav>
 
       <div className='create-trip-options'>
