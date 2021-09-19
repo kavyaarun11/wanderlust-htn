@@ -3,9 +3,6 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import fire from "../../auth/fire";
 
@@ -36,6 +33,7 @@ export default function TransportationModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [loader, setLoader] = useState(false);
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -47,24 +45,38 @@ export default function TransportationModal() {
   };
 
   const handleSubmit = (e) => {
-    let Data = {
-      ticket_name1: ticket_name,
-      type1: type,
-      date1: date,
-      location1: location,
-      ticket_number1: ticket_number,
-      time1: time,
-    };
-    allTrans.push(Data);
-    console.log(Data);
-    fire.firestore().collection("users").add({ uid: "parmin" });
+    e.preventDefault();
+    setLoader(true)
+    fire.firestore().collection("transportations").add({ 
+      ticket_name: ticket_name,
+      type: type,
+      date: date,
+      location: location,
+      ticket_number: ticket_number,
+      time: time,
+    })
+    .then(() => {
+      alert('Transportation data has been saved');
+      setLoader(false);
+    })
+    .catch(error => {
+      alert(error.message);
+      setLoader(false);
+    })
+
+    setName('');
+    setType('');
+    setDate('');
+    setLocation('');
+    setNumber('');
+    setTIme('');
   };
 
   return (
     <div>
       <nav>
-        <b>Welcome Back!</b>
-        <button className='logout'>LOGOUT</button>
+        <b>Transportation</b>
+        <button className='logout'>Go Back</button>
       </nav>
       <div className='button-container'>
         <Button id='transportation-modal-button' onClick={handleOpen}>
@@ -76,6 +88,7 @@ export default function TransportationModal() {
         onClose={handleClose}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'
+        onSubmit={handleSubmit}
       >
         <Box sx={style}>
           <Typography id='modal-modal-title' variant='h6' component='h2'>
@@ -126,6 +139,7 @@ export default function TransportationModal() {
                 type='submit'
                 onClick={handleSubmit}
                 id='transportation-submit'
+                style={{background: loader ? "#ccc" : "rgb(2, 2, 110)"}}
               >
                 Submit
               </button>
@@ -138,11 +152,3 @@ export default function TransportationModal() {
     </div>
   );
 }
-// let allTrans = [];
-//   let [data, setData] = useState({
-//     name: "",
-//     location: "",
-//     data: " ",
-//     cost: 0.0,
-//     ticket_number: "",
-//     Type: "",
