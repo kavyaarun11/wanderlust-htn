@@ -23,8 +23,6 @@ const Hero = ({ handleLogout }) => {
         <button onClick={handleLogout}>LOGOUT</button>
       </nav>
 
-      {/* <h1> Let's get started! </h1> */}
-
       <div className='cards-container '>
         <div className='card1'>
           <MediaCard />
@@ -37,4 +35,4 @@ const Hero = ({ handleLogout }) => {
   );
 };
 
-export default withRouter(Hero);
+export default Hero;

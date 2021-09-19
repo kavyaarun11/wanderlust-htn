@@ -1,9 +1,8 @@
 import "./App.css";
 import Home from "./Home";
-import Hero from "./pages/dashboard";
-import CreateTrip from "./Components/createTrip";
+import CreateTrip from "./pages/createTrip";
 
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -11,9 +10,8 @@ function App() {
     <main>
       <BrowserRouter>
         <Switch>
-          <Route exact path='/login' component={Home} />
-          <Route exact path='/' component={Hero} />
-          <Route exact path='/create-trip' component={CreateTrip} />
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/create-trip' component={CreateTrip}/>
         </Switch>
       </BrowserRouter>
     </main>
