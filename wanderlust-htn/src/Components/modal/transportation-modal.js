@@ -8,6 +8,10 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 
+
+
+import './modal.css';
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -37,7 +41,16 @@ export default function TransportationModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+     
+      <nav>
+        <b>
+        Welcome Back!
+        </b>
+        <button className="logout">LOGOUT</button>
+      </nav>
+      <div className = "button-container">
+      <Button  id = "transportation-modal-button" onClick={handleOpen}>Enter Transportation Information</Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -62,10 +75,11 @@ export default function TransportationModal() {
             <input type='price' />
           </Typography>
           <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-            <button type='submit'>Submit</button>
+            <button type='submit' id = "transportation-submit">Submit</button>
           </Typography>
         </Box>
       </Modal>
+    
     </div>
   );
 }

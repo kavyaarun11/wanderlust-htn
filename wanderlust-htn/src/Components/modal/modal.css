@@ -1,0 +1,32 @@
+#modal-modal-title label{
+    display: block;
+    color:rgba(4, 176, 219, 0.9)
+}
+
+#modal-modal-title input{
+    display: block;
+    width: 100%;
+    border-block-color: black;
+    height:4vh
+}
+#transportation-submit{
+   margin-top:  3vh
+}
+
+#transportation-modal-button{
+    background-color:rgba(4, 176, 219, 0.9);
+    width: 50%;
+    border-radius: 3vh;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 25%;
+    font-size: 5vh !important;
+}
+
+.button-container{
+    display: block;
+    align-items: center;
+}
