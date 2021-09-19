@@ -9,6 +9,7 @@ export default function Transportation() {
     data: " ",
     cost: 0.0,
     ticket_number: "",
+    Type: "",
   });
 
   return (
@@ -22,11 +23,13 @@ export default function Transportation() {
         >
           <Box sx={style}>
             <Typography id='modal-modal-title' variant='h6' component='h2'>
-              Text in a modal
+              <label> Name</label>
+              <input type='text' name='name' placeholder='Name of ' />
             </Typography>
-            <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-              Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-            </Typography>
+            <Typography
+              id='modal-modal-description'
+              sx={{ mt: 2 }}
+            ></Typography>
           </Box>
         </Modal>
       </Modal>
