@@ -27,10 +27,10 @@ function Itinerary() {
     getItinerary();
   }, []);
 
-  const removeData = (id) => {
+  const removeData = (activityName) => {
 
-    axios.delete(`${URL}/${id}`).then(res => {
-        const del = itinerary.filter(itinerary => id !== itinerary.activityName)
+    axios.delete(`${URL}/${activityName}`).then(res => {
+        const del = itinerary.filter(itinerary => activityName !== itinerary.activityName)
         setItinerary(del)
     })
 }

@@ -55,6 +55,7 @@ export default function TransportationModal() {
       location: location,
       ticket_number: ticket_number,
       time: time,
+      UID: localStorage.getItem('userUID')
     })
     .then(() => {
       alert('Transportation data has been saved');

@@ -56,6 +56,7 @@ export default function HotelModal() {
       location: location,
       booking_number: booking_number,
       time: time,
+      UID: localStorage.getItem('userUID')
     })
     .then(() => {
       alert('Hotel booking has been saved');
