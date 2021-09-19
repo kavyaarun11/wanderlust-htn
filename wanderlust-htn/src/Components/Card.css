@@ -42,14 +42,19 @@ margin-top: 5vh;
 .CardBox1{
     max-width: 345;
     margin: 'auto';
-    background: rgb(214, 214, 214);
+    background: radial-gradient(
+    ellipse at left bottom,
+    rgb(194, 222, 233) 0%,
+    rgba(157, 176, 192, 0.9) 59%,
+    rgba(168, 207, 240, 0.9) 100%
+  );
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
   height: 400px;
   padding-top: -5vh;
 }
 .CardBox1:after{
   content: "Create New Trip";
-  color:  rgb(112,161,180);
+  color:  rgb(63, 63, 63);
   font-weight: bold;
   font-size: 30px;
 
@@ -58,18 +63,18 @@ margin-top: 5vh;
 .CardBox2{
     max-width: 345;
     margin: 'auto';
-    background: rgb(214, 214, 214);/* radial-gradient(
+    background: radial-gradient(
     ellipse at left bottom,
-    rgb(133, 199, 222) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(245, 245, 245, 0.9) 100%
-  );*/
+    rgb(30, 99, 124) 0%,
+    rgba(4, 176, 219, 0.9) 59%,
+    rgba(22, 141, 196, 0.9) 100%
+  );
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
   height: 400px;
 }
 .CardBox2:after{
   content: "View Past Trips";
-  color:  rgb(112,161,180);
+  color: rgba(255, 255, 255, 0.76);
   font-weight: bold;
   font-size: 30px;
   text-align: left;
@@ -105,28 +110,31 @@ margin-top: 5vh;
 }
 
 .CardBox1:hover{
-    background: radial-gradient(
+  background: radial-gradient(
     ellipse at left bottom,
-    rgb(98, 185, 216) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(198, 219, 240, 0.9) 100%
+    rgb(177, 250, 222) 0%,
+    rgba(138, 247, 192, 0.9) 59%,
+    rgba(195, 235, 215, 0.9) 100%
   );
 }
 
 .CardBox1:hover::after{
-    content:"Hello";
+    content:"Get Started!";
+    color: rgba(255, 255, 255, 0.76);
 }
 .CardBox2:hover{
-    background: radial-gradient(
+  background: radial-gradient(
     ellipse at left bottom,
-    rgb(98, 185, 216) 0%,
-    rgba(160, 196, 226, 0.9) 59%,
-    rgba(198, 219, 240, 0.9) 100%
+    rgb(177, 250, 222) 0%,
+    rgba(138, 247, 192, 0.9) 59%,
+    rgba(195, 235, 215, 0.9) 100%
   );
+  color:  rgb(63, 63, 63);
 }
 
 .CardBox2:hover::after{
-    content:"Hello";
+    content:"Check out old memories!";
+    color:  rgb(63, 63, 63);
 }
 nav{
     background: transparent;
