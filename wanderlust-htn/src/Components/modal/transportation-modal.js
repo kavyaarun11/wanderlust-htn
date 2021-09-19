@@ -62,7 +62,7 @@ export default function TransportationModal() {
             <input type='price' />
           </Typography>
           <Typography id='modal-modal-description' sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            <button type='submit'>Submit</button>
           </Typography>
         </Box>
       </Modal>
