@@ -1,0 +1,65 @@
+/* body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    color: #4d4d4d;
+  } */
+  
+  #title {
+    text-align: center;
+  }
+  
+  #itinerary {
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+  }
+  
+  #itinerary td,
+  #itinerary th {
+    border: 1px solid #ddd;
+    padding: 12px;
+  }
+  
+  #itinerary tr:hover {
+    background-color: #ddd;
+  }
+  
+  #itinerary th {
+    padding: 10px;
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .opration {
+    text-align: center;
+  }
+  
+  .button {
+    border: none;
+    outline: none;
+    font-size: 11px;
+    font-family: "Poppins", sans-serif;
+    color: #f44336;
+    padding: 3px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #f44336;
+    background-color: transparent;
+  }
+  
+  .button:active {
+    border: 1px solid blue;
+  }
+
+  .itinerary-tablediv {
+    margin-top: 95%;
+    position:sticky;
+  }
+
+  @media only screen and (max-height: 700px) {
+    .itinerary-tablediv {
+        margin-top: 60%;
+      }
+  }

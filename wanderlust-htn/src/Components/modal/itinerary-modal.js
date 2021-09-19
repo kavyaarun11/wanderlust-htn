@@ -70,7 +70,7 @@ export default function ItineraryModal() {
   let history = useHistory();
   return (
     <div>
-      <ParticlesContainer></ParticlesContainer>
+      {/* <ParticlesContainer></ParticlesContainer> */}
       <div>
       <nav>
         <button className='logout' onClick={history.goBack}>Go Back</button>

@@ -13,6 +13,7 @@ function Transportation() {
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
+        if(doc.data())
         items.push(doc.data());
       });
       setTransportations(items);

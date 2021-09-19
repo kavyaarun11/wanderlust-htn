@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ItineraryModal from "../../Components/modal/itinerary-modal";
 import firebase from "../../auth/fire.js";
+import axios from 'axios';
+import './travel.css';
 
 function Itinerary() {
   const [itinerary, setItinerary] = useState([]);
@@ -24,28 +26,62 @@ function Itinerary() {
     getItinerary();
   }, []);
 
+  const removeData = (id) => {
+
+    axios.delete(`${URL}/${id}`).then(res => {
+        const del = itinerary.filter(itinerary => id !== itinerary.activityName)
+        setItinerary(del)
+    })
+}
+
+  const renderHeader = () => {
+    let headerElement = ['Activity Name', 'Date', 'Time', 'Location']
+
+    return headerElement.map((key, index) => {
+        return <th key={index}>{key.toUpperCase()}</th>
+    })
+}
+
+const renderBody = () => {
+    return itinerary && itinerary.map(({ activityName, date, time, location }) => {
+        return (
+            <tr key={activityName}>
+                <td>{activityName}</td>
+                <td>{date}</td>
+                <td>{time}</td>
+                <td>{location}</td>
+                <td className='itinerary_table'>
+                    <button className='button' onClick={() => removeData(activityName)}>Delete</button>
+                </td>
+            </tr>
+        )
+    })
+}
+
   if (loading) {
     return <h1>Loading...</h1>;
   }
 
   return (
-    <div>
+    <div class="table">
     <div>
       <ItineraryModal />
     </div>
-    <div>
-      <h1>Added Itinerary Activities</h1>
-      {itinerary.map((itinerary)=> (
-        <div key={itinerary.activityName}>
-          <h1>{itinerary.activityName}</h1>
-          <h2>{itinerary.date}</h2>
-          <h2>{itinerary.time}</h2>
-          <p>{itinerary.location}</p>
-          </div>
-      )
-      )}
-    </div>
+    <>
+    <div className="itinerary-tablediv">
+            <h1 id='title'>Added Itinerary Activities</h1>
+            <table id='itinerary'>
+                <thead>
+                    <tr>{renderHeader()}</tr>
+                </thead>
+                <tbody>
+                    {renderBody()}
+                </tbody>
+            </table></div>
+        </>
   </div>
+  
+  
   );
 }
 

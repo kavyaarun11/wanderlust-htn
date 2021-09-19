@@ -38,6 +38,7 @@ const Home = () => {
           .doc(data.uid)
           .set({ uid: data.uid });
         //console.log(fire.firestore().collection(data.uid).get());
+        console.log(localStorage.getItem(data.uid));
       })
       .catch((err) => {
         switch (err.code) {
