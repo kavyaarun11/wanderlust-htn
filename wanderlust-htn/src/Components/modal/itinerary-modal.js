@@ -52,6 +52,7 @@ export default function ItineraryModal() {
       date: date,
       location: location,
       time: time,
+      UID: localStorage.getItem('userUID')
     })
     .then(() => {
       alert('Itinerary has been saved');

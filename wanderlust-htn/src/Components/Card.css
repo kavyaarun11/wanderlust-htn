@@ -139,3 +139,7 @@ margin-top: 5vh;
 nav{
     background: transparent;
 }
+
+.MuiButtonBase-root{
+  margin-left: -4px!important;
+}

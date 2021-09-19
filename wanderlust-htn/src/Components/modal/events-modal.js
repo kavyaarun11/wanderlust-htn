@@ -56,6 +56,7 @@ export default function EventsModal() {
       location: location,
       booking_number: booking_number,
       time: time,
+      UID: localStorage.getItem('userUID')
     })
     .then(() => {
       alert('Event data has been saved');

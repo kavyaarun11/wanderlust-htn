@@ -13,6 +13,7 @@ function Events() {
     ref.onSnapshot((querySnapshot) => {
       const items = [];
       querySnapshot.forEach((doc) => {
+        if(doc.data().UID==localStorage.getItem('userUID'))
         items.push(doc.data());
       });
       setEvents(items);
