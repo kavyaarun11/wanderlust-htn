@@ -4,7 +4,12 @@ import "../Components/Card.css";
 import { createTheme } from "@material-ui/core/styles";
 import MediaCard from "../Components/Card";
 import MediaCard2 from "../Components/Card2";
-import background from "../images/background.png";
+import background from "../images/New_Trips_Background.svg";
+import EventsCard from "../Components/eventsCard";
+import ItineraryCard from "../Components/itineraryCard";
+import TransportationCard from "../Components/transportationCard";
+import HotelCard from "../Components/hotels";
+
 
 const useStyles = makeStyles({
   root: {
@@ -39,19 +44,23 @@ function CreateTrip({ handleLogout }) {
         <button onClick={handleLogout}>LOGOUT</button>
       </nav>
 
-      <div className='cards-container '>
+      <div className = 'create-trip-options'>
+      <div className='card-2x2-container-1'>
         <div className='card1'>
-          <MediaCard />
+          <EventsCard />
         </div>
         <div className='card1'>
-          <MediaCard2 />
+        <TransportationCard />
+        </div>
+        </div>
+        <div className = 'card-2x2-container-2'>
+        <div className='card1'>
+        <HotelCard/>
         </div>
         <div className='card1'>
-          <MediaCard2 />
+        <ItineraryCard />
         </div>
-        <div className='card1'>
-          <MediaCard2 />
-        </div>
+      </div>
       </div>
     </section>
   );
