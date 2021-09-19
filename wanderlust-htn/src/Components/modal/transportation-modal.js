@@ -3,6 +3,9 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 
 const style = {
@@ -10,7 +13,8 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  width: 700,
+  height: 500,
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
@@ -21,6 +25,15 @@ export default function TransportationModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose1 = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div>
@@ -33,7 +46,20 @@ export default function TransportationModal() {
       >
         <Box sx={style}>
           <Typography id='modal-modal-title' variant='h6' component='h2'>
-            Text in a modal
+            <label>Ticket Name</label>
+            <input type='text' />
+
+            <label>Type</label>
+            <input type='text' />
+
+            <label>Date</label>
+            <input type='date' />
+
+            <label>Location</label>
+            <input type='text' />
+
+            <label>Ticket Number</label>
+            <input type='price' />
           </Typography>
           <Typography id='modal-modal-description' sx={{ mt: 2 }}>
             Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
