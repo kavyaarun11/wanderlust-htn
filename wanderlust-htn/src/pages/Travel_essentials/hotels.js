@@ -71,7 +71,7 @@ const renderBody = () => {
       <HotelModal />
     </div>
     <>
-    <div className="itinerary-tablediv">
+    <div className="hotels-tablediv">
             <h1 id='title'>Added Hotel Bookings</h1>
             <table id='itinerary'>
                 <thead>

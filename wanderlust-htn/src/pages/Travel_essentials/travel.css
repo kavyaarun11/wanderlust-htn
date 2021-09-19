@@ -60,3 +60,26 @@
     clear: both;
     margin-left: calc(50% - 270px);
   }
+  .transportation-tablediv {
+    margin-top: 50vh;
+    position: relative;
+    display: table;
+    clear: both;
+    margin-left: calc(50% - 284px);
+  }
+
+  .hotels-tablediv {
+    margin-top: 50vh;
+    position: relative;
+    display: table;
+    clear: both;
+    margin-left: calc(50% - 294px);
+  }
+
+  .events-tablediv {
+    margin-top: 50vh;
+    position: relative;
+    display: table;
+    clear: both;
+    margin-left: calc(50% - 370px);
+  }

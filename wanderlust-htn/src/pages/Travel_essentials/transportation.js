@@ -72,7 +72,7 @@ const renderBody = () => {
       <TransportationModal />
     </div>
     <>
-    <div className="itinerary-tablediv">
+    <div className="transportation-tablediv">
             <h1 id='title'>Added Tickets</h1>
             <table id='itinerary'>
                 <thead>

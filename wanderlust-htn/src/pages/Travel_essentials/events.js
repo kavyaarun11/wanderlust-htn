@@ -27,12 +27,8 @@ function Events() {
     getEvents();
   }, []);
 
-  const removeData = (id) => {
-
-    axios.delete(`${URL}/${id}`).then(res => {
-        const del = events.filter(events => id !== events.event_name)
-        setEvents(del)
-    })
+  const removeData = (event_name) => {
+   
 }
 
   const renderHeader = () => {
@@ -71,7 +67,7 @@ const renderBody = () => {
       <EventsModal />
     </div>
     <>
-    <div className="itinerary-tablediv">
+    <div className="events-tablediv">
             <h1 id='title'>Added Events</h1>
             <table id='itinerary'>
                 <thead>
