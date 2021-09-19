@@ -1,9 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "../Components/Card.css";
-import { createTheme } from "@material-ui/core/styles";
-import MediaCard from "../Components/Card";
-import MediaCard2 from "../Components/Card2";
 import background from "../images/New_Trips_Background.svg";
 import EventsCard from "../Components/four-cards/eventsCard";
 import ItineraryCard from "../Components/four-cards/itineraryCard";
