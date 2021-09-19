@@ -3,7 +3,6 @@ import MediaCard from "../Components/Card";
 import MediaCard2 from "../Components/Card2";
 import background from "../images/Landing_PageOff_White_Landing_Page.svg";
 import "../App.css";
-import { withRouter } from "react-router-dom";
 
 const Hero = ({ handleLogout }) => {
   return (
