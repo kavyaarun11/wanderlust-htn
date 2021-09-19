@@ -15,11 +15,10 @@ const Hero = ({ handleLogout }) => {
       }}
     >
       <nav>
+        <b>
         Welcome Back!
-        <button className='profile_button'>
-          <b>PROFILE</b>
-        </button>
-        <button onClick={handleLogout}>LOGOUT</button>
+        </b>
+        <button className="logout"onClick={handleLogout}>LOGOUT</button>
       </nav>
 
       <div className='cards-container '>

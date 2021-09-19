@@ -200,6 +200,17 @@ button:hover {
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
 }
 
+.hero nav button:hover {
+  width: 86px;
+  padding: 10px 0;
+  background: #e9e9e9;
+  color: #38A3AA;
+  border-radius: 8px;
+  border: 2px solid;
+  border-color: #38A3AA;
+  box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
+}
+
 .slogan {
   position: relative;
   margin: 0;
