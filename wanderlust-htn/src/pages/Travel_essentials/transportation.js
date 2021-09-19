@@ -1,8 +1,14 @@
 import React from "react";
 
+import TransportationModal from "../../Components/modal/transportation-modal";
 
 function Transportation() {
-  return <div>Transportation</div>;
+  return (
+    <div>
+      transportation
+      <TransportationModal />
+    </div>
+  );
 }
 
 export default Transportation;

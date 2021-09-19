@@ -1,15 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-export default function Itinerary() {
-  const [data, setData] = useState({
-    val: [],
-    label: [],
-    color: "",
-  });
-
-  return (
-    <div>
-      <h1>itinerary</h1>
-    </div>
-  );
+function Itinerary() {
+  return <div>Itinerary</div>;
 }
+
+export default Itinerary;
