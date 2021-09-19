@@ -7,15 +7,14 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import "./Card.css";
+import "../Card.css";
 import { ThemeProvider, createTheme } from "@material-ui/core/styles";
-import { useHistory, withRouter, useLocation} from "react-router-dom";
+import { useHistory, withRouter, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import CreateTrip from "../pages/createTrip";
+import CreateTrip from "../../pages/createTrip";
 import { ButtonBase } from "@material-ui/core";
-import {Link, BrowserRouter} from 'react-router-dom'
-import background from "../images/Itinerary_Card.svg";
-
+import { Link, BrowserRouter } from "react-router-dom";
+import background from "../../images/Itinerary_Card.svg";
 
 const theme = createTheme({
   typography: {
@@ -42,20 +41,19 @@ function ItineraryCard() {
   const history = useHistory();
   return (
     <Card className='create-card-container'>
-        <div onClick={() => history.push('/itinerary')}>
-      <CardActionArea
-        className= "Create-trip-card"
-        id='cardFrame'
-        style={{
+      <div onClick={() => history.push("/itinerary")}>
+        <CardActionArea
+          className='Create-trip-card'
+          id='cardFrame'
+          style={{
             backgroundImage: `url(${background})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "cover"}}
-      >
-        <CardContent className='CardBox'>
-        
-    </CardContent>
-    </CardActionArea>
-    </div>
+            backgroundSize: "cover",
+          }}
+        >
+          <CardContent className='CardBox'></CardContent>
+        </CardActionArea>
+      </div>
     </Card>
   );
 }
