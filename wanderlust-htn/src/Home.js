@@ -31,18 +31,13 @@ const Home = () => {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .then((data) => {
+        localStorage.setItem("userUID", data.uid);
         fire
           .firestore()
           .collection("users")
           .doc(data.uid)
-          .set({ uid: data.uid })
-          .then(() => {
-            console.log("working");
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-        //history.push("/");
+          .add({ uid: data.uid });
+        //console.log(fire.firestore().collection(data.uid).get());
       })
       .catch((err) => {
         switch (err.code) {
