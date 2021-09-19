@@ -45,12 +45,14 @@ margin-top: 5vh;
     background: rgb(214, 214, 214);
   box-shadow: 0 50px 70px -20px rgba(0, 0, 0, 0.8);
   height: 400px;
+  padding-top: -5vh;
 }
 .CardBox1:after{
   content: "Create New Trip";
-  color: black;
+  color:  rgb(112,161,180);
   font-weight: bold;
   font-size: 30px;
+
 
 }
 .CardBox2{
@@ -67,10 +69,20 @@ margin-top: 5vh;
 }
 .CardBox2:after{
   content: "View Past Trips";
-  color: black;
+  color:  rgb(112,161,180);
   font-weight: bold;
   font-size: 30px;
+  text-align: left;
 
+}
+
+.MuiTypography-gutterBottom{
+    padding-top: 0 !important;
+}
+
+.MuiCardContent-root{
+    text-align: left !important;
+    padding-left: 40px !important;
 }
 
 .cardFrame{
