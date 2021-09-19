@@ -8,6 +8,11 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import "./Card.css";
 import {createTheme } from '@material-ui/core/styles';
+import { useHistory, withRouter, useLocation} from "react-router-dom";
+import { useState, useEffect } from "react";
+import ViewTrips from "../pages/viewTrips";
+import { ButtonBase } from "@material-ui/core";
+import {Link, BrowserRouter} from 'react-router-dom'
 
 const theme = createTheme({
   typography: {
@@ -36,14 +41,18 @@ const theme = createTheme({
 
 
 export default function MediaCard2() {
-        const classes = useStyles();
+    const classes = useStyles();
+    const history = useHistory();
   return (
 <Card className= "card-container">
+<div onClick={() => history.push('/view-trips')}>
             <CardActionArea className = {classes.container} id="cardFrame">
+      
         <CardContent  className="CardBox2">
           <Typography gutterBottom variant="h5" component="h2" className = "Cardcontent"> </Typography>
               </CardContent>
               </CardActionArea>
-</Card>
+              </div>
+              </Card>
   );
       } 
