@@ -9,6 +9,8 @@ import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import fire from "../../auth/fire";
 
+import "./modal.css";
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -60,7 +62,15 @@ export default function TransportationModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
+      <nav>
+        <b>Welcome Back!</b>
+        <button className='logout'>LOGOUT</button>
+      </nav>
+      <div className='button-container'>
+        <Button id='transportation-modal-button' onClick={handleOpen}>
+          Enter Transportation Information
+        </Button>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -112,11 +122,16 @@ export default function TransportationModal() {
                 value={time}
                 onChange={(e) => setTIme(e.target.value)}
               />
-              <button type='submit' onClick={handleSubmit}>
+              <button
+                type='submit'
+                onClick={handleSubmit}
+                id='transportation-submit'
+              >
                 Submit
               </button>
             </form>
           </Typography>
+          <Typography id='modal-modal-description' sx={{ mt: 2 }}></Typography>
           <Typography id='modal-modal-description' sx={{ mt: 2 }}></Typography>
         </Box>
       </Modal>
