@@ -3,9 +3,10 @@ import fire from "./auth/fire.js";
 import Dashboard from "./pages/dashboard";
 import "./App.css";
 import Login from "./pages/Login";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch, withRouter, useHistory } from "react-router-dom";
 
 const Home = () => {
+  const history = useHistory();
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -41,6 +42,7 @@ const Home = () => {
           .catch((error) => {
             console.log(error);
           });
+        //history.push("/");
       })
       .catch((err) => {
         switch (err.code) {
@@ -61,7 +63,9 @@ const Home = () => {
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then((data) => {})
+      .then((data) => {
+        history.push("/");
+      })
       .catch((err) => {
         switch (err.code) {
           case "auth/email-already-in-use":

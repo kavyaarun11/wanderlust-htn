@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./Home";
 import Hero from "./pages/dashboard";
-import createTrip from "./Components/createTrip";
+import CreateTrip from "./Components/createTrip";
 
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -11,9 +11,9 @@ function App() {
     <main>
       <BrowserRouter>
         <Switch>
-          <Route path='/login' component={Home} />
-          <Route path='/dash' component={Hero} />
-          <Route path='/create-trip' render={() => <createTrip />} />
+          <Route exact path='/login' component={Home} />
+          <Route exact path='/' component={Hero} />
+          <Route exact path='/create-trip' component={CreateTrip} />
         </Switch>
       </BrowserRouter>
     </main>
