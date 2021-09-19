@@ -1,10 +1,10 @@
 import React from "react";
-import hotelModal from "../../Components/modal/hotel-modal";
+import HotelModal from "../../Components/modal/hotel-modal";
 function Hotels() {
   return (
     <div>
       Hotel
-      <hotelModal />
+      <HotelModal />
     </div>
   );
 }
