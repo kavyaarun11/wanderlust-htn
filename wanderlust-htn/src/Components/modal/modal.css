@@ -58,3 +58,11 @@
     display: block;
     align-items: center;
 }
+
+#tsparticles{
+    position: absolute!important;
+}
+.logout{
+    position: relative;
+    z-index:9999;
+}

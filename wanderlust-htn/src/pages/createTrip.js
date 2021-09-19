@@ -35,10 +35,9 @@ function CreateTrip({ handleLogout }) {
       }}
     >
       <nav>
+        <b>
         Welcome Back!
-        <button className='profile_button'>
-          <b>PROFILE</b>
-        </button>
+        </b>
         <button onClick={history.goBack}>Go Back</button>
       </nav>
 

@@ -6,6 +6,7 @@ import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import fire from "../../auth/fire";
 import { useHistory } from "react-router-dom";
+import ParticlesContainer from "../../pages/ParticleContainer"
 
 import "./modal.css";
 
@@ -69,9 +70,12 @@ export default function ItineraryModal() {
   let history = useHistory();
   return (
     <div>
+      <ParticlesContainer></ParticlesContainer>
+      <div>
       <nav>
         <button className='logout' onClick={history.goBack}>Go Back</button>
       </nav>
+      </div>
       <div className='button-container'>
         <Button id='transportation-modal-button' onClick={handleOpen}>
           Enter Itinerary Activity
