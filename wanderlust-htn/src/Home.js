@@ -36,7 +36,7 @@ const Home = () => {
           .firestore()
           .collection("users")
           .doc(data.uid)
-          .add({ uid: data.uid });
+          .set({ uid: data.uid });
         //console.log(fire.firestore().collection(data.uid).get());
       })
       .catch((err) => {
