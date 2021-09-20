@@ -4,6 +4,7 @@ This is your all in one travel app. Add your itinerary, plane tickets, hotel boo
 
 # Link to the Project
 
+[Devpost + Video Presentation](https://devpost.com/software/wanderlust-ityjl6)
 [WanderLust](https://wanderlust-htn.vercel.app/create-trip)
 
 # Technologies being used
